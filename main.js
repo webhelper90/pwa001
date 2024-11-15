@@ -1,5 +1,5 @@
 function popstate1(event) {
-    event.preventDefault();
+    
     /** @type{ons.OnsNavigatorElement} */
     const onsNavigator1 = document.getElementById('ons-navigator1');
 
@@ -7,7 +7,7 @@ function popstate1(event) {
         onsNavigator1.popPage();
         
         //ブラウザのヒストリーから1つ除外する
-        history.go(-1); // ブラウザのヒストリーから1つ除外する
+        //history.go(-1); // ブラウザのヒストリーから1つ除外する
     } else {
         // ホームページの表示など、ルートページでの処理
         // 例: ホームページに遷移
@@ -46,6 +46,25 @@ function load1(event) {
     });
 }
 
+function back1(event) {
+    /** @type{ons.OnsNavigatorElement} */
+    const onsNavigator1 = document.getElementById('ons-navigator1');
+
+    if (onsNavigator1.pages.length > 1) {  // 戻るページがあるか確認
+        onsNavigator1.popPage();
+
+        //ブラウザのヒストリーから1つ除外する
+        history.go(-1); // ブラウザのヒストリーから1つ除外する
+    } else {
+        // ホームページの表示など、ルートページでの処理
+        // 例: ホームページに遷移
+        //window.location.href = '#page5'; // ホームページのURLを設定
+        onsNavigator1.resetToPage('page5.html');  // home.htmlにリセット
+    }
+
+    event.stopPropagation();
+}
+
 window.addEventListener('popstate', popstate1);
 document.addEventListener('init', (event) => {
     let page = event.target;
@@ -64,9 +83,9 @@ document.addEventListener('init', (event) => {
     if (page.id === 'ons-page4') {
         let onsbackbutton1_element = document.querySelector('#ons-back-button1');
         if(onsbackbutton1_element) {
-            onsbackbutton1_element.addEventListener('click', popstate1);
+            onsbackbutton1_element.addEventListener('click', back1);
             page.addEventListener('destroy', function(event) {
-                onsbackbutton1_element.removeEventListener('click', popstate1);
+                onsbackbutton1_element.removeEventListener('click', back1);
             }, { 'once' : true });
         }
     }

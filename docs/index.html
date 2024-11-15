@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta name="description" content="Pwappyで作成されたPWAアプリ">
+<title>サンプルアプリケーション</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" href="images/icon.svg?v=20241115172620" type="image/svg+xml">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png?v=20241115172620">
+
+<link rel="manifest" href="manifest.webmanifest?v=20241115172620">
+
+<!-- holderjs -->
+<script defer src="https://cdn.jsdelivr.net/npm/holderjs@2.9.9/holder.min.js"></script>
+
+<!-- fontawesome v6 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<!-- Onsen UI CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/onsenui@2.12.8/css/onsenui-core.min.css" integrity="sha512-PQp1bNWgDTGvCTcwkThDhPqcvC9yrTj2bb6sjCidFsTcup/oVt8D3SYCfIg/0XZOuOeU5prvIvkVVN/0NmG39Q==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/onsenui@2.12.8/css/onsen-css-components.min.css" integrity="sha512-jvoxSMcFCHzycwZ/0cLrEu6ZquNvsgVMiUJI2NaSFGxNQZz3T8sc8DvDhm0BiH9bHUreYtJFT147rJdzchZd7g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<!-- OnsenUI -->
+<script src="https://cdn.jsdelivr.net/npm/onsenui@2.12.8/js/onsenui.min.js" integrity="sha512-gTBYvF3IPbzY0LLzGILVeSPCbNEGdttGGwFmU/It7aX3UXZzfyn9TaQO9vegWAV24ChabN/YsjZoYrJkdJrOTA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    if (ons.platform.isIPhoneX()) {
+        document.documentElement.setAttribute('onsflag-iphonex-portrait', '');
+        document.documentElement.setAttribute('onsflag-iphonex-landscape', '');
+    }
+    ons.disableIconAutoPrefix();
+</script>
+</head>
+<body>
+<app id="application"><ons-navigator id="ons-navigator1" swipeable="" page="page5.html"></ons-navigator></app>
+<template id="page4.html"><ons-page id="ons-page4"><div id="div34" class="page__background"></div>
+<ons-toolbar id="ons-toolbar3"><div id="div61" class="left"><ons-back-button id="ons-back-button1"></ons-back-button></div>
+<div id="div62" class="center">新作映画</div>
+<div id="div63" class="right"></div></ons-toolbar><div id="div35" class="page__content"><div id="div36" class="container">
+<div id="div37" class="hero">
+<img id="img5" src="https://placehold.co/600x400" alt="映画の画像" data-src="holder.js/600x400?outline=yes" style="width: 100%; height: 100%; object-fit: cover;"><div id="div38" class="hero-text">
+<h1 id="h11">映画のタイトル</h1>
+<p id="p1">この映画は、○○についての映画です。ぜひご覧ください。</p>
+<a id="a1" href="#" class="btn">チケットを購入する</a>
+</div>
+</div>
+<div id="div39" class="content">
+<h2 id="h21">ストーリー</h2>
+<p id="p2">○○と△△は、□□を目指して旅に出る。その道中、彼らは…</p>
+<h2 id="h22">キャスト</h2>
+<ul id="ul1" class="cast-list">
+<li id="li1">
+<img id="img6" src="https://placehold.co/100x100" alt="俳優1の画像" data-src="holder.js/100x100?outline=yes"><p id="p3">俳優1の名前</p>
+</li>
+<li id="li2">
+<img id="img7" src="https://placehold.co/100x100" alt="俳優2の画像" data-src="holder.js/100x100?outline=yes"><p id="p4">俳優2の名前</p>
+</li>
+<li id="li3">
+<img id="img8" src="https://placehold.co/100x100" alt="俳優3の画像" data-src="holder.js/100x100?outline=yes"><p id="p5">俳優3の名前</p>
+</li>
+</ul>
+<h2 id="h23">監督</h2>
+<div id="div40" class="director" style="justify-content: center;
+display: flex;">
+<img id="img9" src="https://placehold.co/100x100" alt="監督の画像" data-src="holder.js/100x100?outline=yes"><div id="div41" class="director-info">
+<p id="p6">監督の名前</p>
+<p id="p7">監督の簡単な説明</p>
+</div>
+</div>
+<h2 id="h24">制作</h2>
+<p id="p8">映画の詳細情報やスタッフリストを掲載</p>
+</div>
+<style id="style1">.container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .hero {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      height: 500px;
+    }
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+    }
+    .hero-text h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+    }
+    .hero-text p {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #ff0000;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .btn:hover {
+      background-color: #cc0000;
+    }
+    .content {
+      width: 80%;
+      max-width: 1000px;
+      margin: 50px auto;
+      text-align: center;
+    }
+    .content h2 {
+      font-size: 3rem;
+      margin-bottom: 30px;
+    }
+    .content p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .cast-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+    .cast-list li {
+      margin: 10px;
+      text-align: center;
+      width: calc(25% - 20px);
+    }
+    .cast-list img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    .director {
+      display: flex;
+      align-items: center;
+      margin-bottom: 50px;
+    }
+    .director img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+    .director-info {
+      text-align: left;
+    }
+    .director-info p {
+      margin-bottom: 5px;
+    }</style>
+</div></div></ons-page></template>
+<template id="page5.html"><ons-page id="ons-page5"><div id="div42" class="page__background"></div>
+<ons-toolbar id="ons-toolbar2"><div id="div49" class="left"></div>
+<div id="div50" class="center">Pwappy</div>
+<div id="div51" class="right"></div></ons-toolbar><div id="div43" class="page__content" style="
+display: flex;
+flex-direction: column;
+">
+<img id="img10" src="pwappy-ken.png" style="max-width: 100%;"><ons-list id="ons-list3"><ons-list-item id="ons-list-item8"><div id="div44" class="left"><ons-checkbox id="ons-checkbox1"></ons-checkbox></div>
+<div id="div45" class="center"><div id="div46" class="list-item__title">誰でも</div></div>
+<div id="div48" class="right"><ons-switch id="ons-switch1"></ons-switch></div></ons-list-item><ons-list-item id="ons-list-item9"><div id="div52" class="left"><ons-checkbox id="ons-checkbox2"></ons-checkbox></div>
+<div id="div53" class="center"><div id="div54" class="list-item__title">手軽に</div></div>
+<div id="div55" class="right"><ons-switch id="ons-switch2"></ons-switch></div></ons-list-item><ons-list-item id="ons-list-item10"><div id="div56" class="left"><ons-checkbox id="ons-checkbox3"></ons-checkbox></div>
+<div id="div57" class="center"><div id="div58" class="list-item__title">PWA開発！！</div></div>
+<div id="div59" class="right"><ons-switch id="ons-switch3"></ons-switch></div></ons-list-item></ons-list><div id="div60" style="display: flex;
+justify-content: center;
+flex-grow: 1;
+flex-shrink: 1;
+flex-basis: auto;
+order: 1;
+align-self: auto;
+align-items: center;
+width: 100%;"><ons-button id="ons-button1">Button</ons-button></div>
+</div></ons-page></template>
+<script src="main.js?20241115172620" type="module"></script><script>if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js');
+}
+</script>
+</body>
+</html>

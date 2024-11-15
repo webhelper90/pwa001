@@ -1,9 +1,77 @@
-<!DOCTYPE html><html lang=ja><head><meta content=Pwappyで作成されたPWAアプリ name=description><title>サンプルアプリケーション</title><meta charset=UTF-8><meta content="IE=edge" http-equiv=X-UA-Compatible><meta content="width=device-width, initial-scale=1.0" name=viewport><link href=favicon.ico rel=icon sizes=32x32><link href="images/icon.svg?v=20241115172620" rel=icon type=image/svg+xml><link href="images/apple-touch-icon.png?v=20241115172620" rel=apple-touch-icon><link href="manifest.webmanifest?v=20241115172620" rel=manifest><script defer src=https://cdn.jsdelivr.net/npm/holderjs@2.9.9/holder.min.js></script><link crossorigin=anonymous href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css referrerpolicy=no-referrer rel=stylesheet><link crossorigin=anonymous href=https://cdn.jsdelivr.net/npm/onsenui@2.12.8/css/onsenui-core.min.css integrity="sha512-PQp1bNWgDTGvCTcwkThDhPqcvC9yrTj2bb6sjCidFsTcup/oVt8D3SYCfIg/0XZOuOeU5prvIvkVVN/0NmG39Q==" referrerpolicy=no-referrer rel=stylesheet><link crossorigin=anonymous href=https://cdn.jsdelivr.net/npm/onsenui@2.12.8/css/onsen-css-components.min.css integrity="sha512-jvoxSMcFCHzycwZ/0cLrEu6ZquNvsgVMiUJI2NaSFGxNQZz3T8sc8DvDhm0BiH9bHUreYtJFT147rJdzchZd7g==" referrerpolicy=no-referrer rel=stylesheet><script crossorigin=anonymous integrity="sha512-gTBYvF3IPbzY0LLzGILVeSPCbNEGdttGGwFmU/It7aX3UXZzfyn9TaQO9vegWAV24ChabN/YsjZoYrJkdJrOTA==" referrerpolicy=no-referrer src=https://cdn.jsdelivr.net/npm/onsenui@2.12.8/js/onsenui.min.js></script><script>if (ons.platform.isIPhoneX()) {
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta name="description" content="Pwappyで作成されたPWAアプリ">
+<title>サンプルアプリケーション</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" href="images/icon.svg?v=20241115182034" type="image/svg+xml">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png?v=20241115182034">
+
+<link rel="manifest" href="manifest.webmanifest?v=20241115182034">
+
+<!-- holderjs -->
+<script defer src="https://cdn.jsdelivr.net/npm/holderjs@2.9.9/holder.min.js"></script>
+
+<!-- fontawesome v6 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<!-- Onsen UI CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/onsenui@2.12.8/css/onsenui-core.min.css" integrity="sha512-PQp1bNWgDTGvCTcwkThDhPqcvC9yrTj2bb6sjCidFsTcup/oVt8D3SYCfIg/0XZOuOeU5prvIvkVVN/0NmG39Q==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/onsenui@2.12.8/css/onsen-css-components.min.css" integrity="sha512-jvoxSMcFCHzycwZ/0cLrEu6ZquNvsgVMiUJI2NaSFGxNQZz3T8sc8DvDhm0BiH9bHUreYtJFT147rJdzchZd7g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<!-- OnsenUI -->
+<script src="https://cdn.jsdelivr.net/npm/onsenui@2.12.8/js/onsenui.min.js" integrity="sha512-gTBYvF3IPbzY0LLzGILVeSPCbNEGdttGGwFmU/It7aX3UXZzfyn9TaQO9vegWAV24ChabN/YsjZoYrJkdJrOTA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    if (ons.platform.isIPhoneX()) {
         document.documentElement.setAttribute('onsflag-iphonex-portrait', '');
         document.documentElement.setAttribute('onsflag-iphonex-landscape', '');
     }
-    ons.disableIconAutoPrefix();</script> <body><app id=application><ons-navigator id=ons-navigator1 page=page5.html swipeable=""></ons-navigator></app> <template id=page4.html><ons-page id=ons-page4><div class=page__background id=div34></div> <ons-toolbar id=ons-toolbar3><div class=left id=div61><ons-back-button id=ons-back-button1></ons-back-button></div> <div class=center id=div62>新作映画</div> <div class=right id=div63></div></ons-toolbar><div class=page__content id=div35><div class=container id=div36><div class=hero id=div37><img alt=映画の画像 data-src="holder.js/600x400?outline=yes" id=img5 src=https://placehold.co/600x400 style="width: 100%; height: 100%; object-fit: cover;"><div class=hero-text id=div38><h1 id=h11>映画のタイトル</h1> <p id=p1>この映画は、○○についての映画です。ぜひご覧ください。</p> <a class=btn href=# id=a1>チケットを購入する</a></div> </div> <div class=content id=div39><h2 id=h21>ストーリー</h2> <p id=p2>○○と△△は、□□を目指して旅に出る。その道中、彼らは… <h2 id=h22>キャスト</h2> <ul class=cast-list id=ul1><li id=li1><img alt=俳優1の画像 data-src="holder.js/100x100?outline=yes" id=img6 src=https://placehold.co/100x100><p id=p3>俳優1の名前 <li id=li2><img alt=俳優2の画像 data-src="holder.js/100x100?outline=yes" id=img7 src=https://placehold.co/100x100><p id=p4>俳優2の名前 <li id=li3><img alt=俳優3の画像 data-src="holder.js/100x100?outline=yes" id=img8 src=https://placehold.co/100x100><p id=p5>俳優3の名前 </ul> <h2 id=h23>監督</h2> <div class=director id=div40 style="justify-content: center;
-display: flex;"><img alt=監督の画像 data-src="holder.js/100x100?outline=yes" id=img9 src=https://placehold.co/100x100><div class=director-info id=div41><p id=p6>監督の名前 <p id=p7>監督の簡単な説明</div> </div> <h2 id=h24>制作</h2> <p id=p8>映画の詳細情報やスタッフリストを掲載</div> <style id=style1>.container {
+    ons.disableIconAutoPrefix();
+</script>
+</head>
+<body>
+<app id="application"><ons-navigator id="ons-navigator1" swipeable="" page="page5.html"></ons-navigator></app>
+<template id="page4.html"><ons-page id="ons-page4"><div id="div34" class="page__background"></div>
+<ons-toolbar id="ons-toolbar3"><div id="div61" class="left"><ons-back-button id="ons-back-button1"></ons-back-button></div>
+<div id="div62" class="center">新作映画</div>
+<div id="div63" class="right"></div></ons-toolbar><div id="div35" class="page__content"><div id="div36" class="container">
+<div id="div37" class="hero">
+<img id="img5" src="https://placehold.co/600x400" alt="映画の画像" data-src="holder.js/600x400?outline=yes" style="width: 100%; height: 100%; object-fit: cover;"><div id="div38" class="hero-text">
+<h1 id="h11">映画のタイトル</h1>
+<p id="p1">この映画は、○○についての映画です。ぜひご覧ください。</p>
+<a id="a1" href="#" class="btn">チケットを購入する</a>
+</div>
+</div>
+<div id="div39" class="content">
+<h2 id="h21">ストーリー</h2>
+<p id="p2">○○と△△は、□□を目指して旅に出る。その道中、彼らは…</p>
+<h2 id="h22">キャスト</h2>
+<ul id="ul1" class="cast-list">
+<li id="li1">
+<img id="img6" src="https://placehold.co/100x100" alt="俳優1の画像" data-src="holder.js/100x100?outline=yes"><p id="p3">俳優1の名前</p>
+</li>
+<li id="li2">
+<img id="img7" src="https://placehold.co/100x100" alt="俳優2の画像" data-src="holder.js/100x100?outline=yes"><p id="p4">俳優2の名前</p>
+</li>
+<li id="li3">
+<img id="img8" src="https://placehold.co/100x100" alt="俳優3の画像" data-src="holder.js/100x100?outline=yes"><p id="p5">俳優3の名前</p>
+</li>
+</ul>
+<h2 id="h23">監督</h2>
+<div id="div40" class="director" style="justify-content: center;
+display: flex;">
+<img id="img9" src="https://placehold.co/100x100" alt="監督の画像" data-src="holder.js/100x100?outline=yes"><div id="div41" class="director-info">
+<p id="p6">監督の名前</p>
+<p id="p7">監督の簡単な説明</p>
+</div>
+</div>
+<h2 id="h24">制作</h2>
+<p id="p8">映画の詳細情報やスタッフリストを掲載</p>
+</div>
+<style id="style1">.container {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -92,10 +160,22 @@ display: flex;"><img alt=監督の画像 data-src="holder.js/100x100?outline=yes
     }
     .director-info p {
       margin-bottom: 5px;
-    }</style></div></div></ons-page></template> <template id=page5.html><ons-page id=ons-page5><div class=page__background id=div42></div> <ons-toolbar id=ons-toolbar2><div class=left id=div49></div> <div class=center id=div50>Pwappy</div> <div class=right id=div51></div></ons-toolbar><div class=page__content id=div43 style="
+    }</style>
+</div></div></ons-page></template>
+<template id="page5.html"><ons-page id="ons-page5"><div id="div42" class="page__background"></div>
+<ons-toolbar id="ons-toolbar2"><div id="div49" class="left"></div>
+<div id="div50" class="center">Pwappy</div>
+<div id="div51" class="right"></div></ons-toolbar><div id="div43" class="page__content" style="
 display: flex;
 flex-direction: column;
-"><img id=img10 src=pwappy-ken.png style="max-width: 100%;"><ons-list id=ons-list3><ons-list-item id=ons-list-item8><div class=left id=div44><ons-checkbox id=ons-checkbox1></ons-checkbox></div> <div class=center id=div45><div class=list-item__title id=div46>誰でも</div></div> <div class=right id=div48><ons-switch id=ons-switch1></ons-switch></div></ons-list-item><ons-list-item id=ons-list-item9><div class=left id=div52><ons-checkbox id=ons-checkbox2></ons-checkbox></div> <div class=center id=div53><div class=list-item__title id=div54>手軽に</div></div> <div class=right id=div55><ons-switch id=ons-switch2></ons-switch></div></ons-list-item><ons-list-item id=ons-list-item10><div class=left id=div56><ons-checkbox id=ons-checkbox3></ons-checkbox></div> <div class=center id=div57><div class=list-item__title id=div58>PWA開発！！</div></div> <div class=right id=div59><ons-switch id=ons-switch3></ons-switch></div></ons-list-item></ons-list><div id=div60 style="display: flex;
+">
+<img id="img10" src="pwappy-ken.png" style="max-width: 100%;"><ons-list id="ons-list3"><ons-list-item id="ons-list-item8"><div id="div44" class="left"><ons-checkbox id="ons-checkbox1"></ons-checkbox></div>
+<div id="div45" class="center"><div id="div46" class="list-item__title">誰でも</div></div>
+<div id="div48" class="right"><ons-switch id="ons-switch1"></ons-switch></div></ons-list-item><ons-list-item id="ons-list-item9"><div id="div52" class="left"><ons-checkbox id="ons-checkbox2"></ons-checkbox></div>
+<div id="div53" class="center"><div id="div54" class="list-item__title">手軽に</div></div>
+<div id="div55" class="right"><ons-switch id="ons-switch2"></ons-switch></div></ons-list-item><ons-list-item id="ons-list-item10"><div id="div56" class="left"><ons-checkbox id="ons-checkbox3"></ons-checkbox></div>
+<div id="div57" class="center"><div id="div58" class="list-item__title">PWA開発！！</div></div>
+<div id="div59" class="right"><ons-switch id="ons-switch3"></ons-switch></div></ons-list-item></ons-list><div id="div60" style="display: flex;
 justify-content: center;
 flex-grow: 1;
 flex-shrink: 1;
@@ -103,6 +183,11 @@ flex-basis: auto;
 order: 1;
 align-self: auto;
 align-items: center;
-width: 100%;"><ons-button id=ons-button1>Button</ons-button></div> </div></ons-page></template> <script src=main.js?20241115172620 type=module></script><script>if ('serviceWorker' in navigator) {
+width: 100%;"><ons-button id="ons-button1">Button</ons-button></div>
+</div></ons-page></template>
+<script src="main.js?20241115182034" type="module"></script><script>if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('service-worker.js');
-}</script>
+}
+</script>
+</body>
+</html>
